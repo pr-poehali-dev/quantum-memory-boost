@@ -91,33 +91,33 @@ export function BentoPricing() {
         </div>
         <div className="flex items-center gap-3 p-3">
           <Badge variant="secondary" className="bg-white/10 text-white border-white/20 font-open-sans-custom text-xs">
-            ПРЕМИУМ
+            ЛЕГЕНДА
           </Badge>
           <Badge
             variant="outline"
             className="hidden lg:flex bg-white/5 text-white border-white/20 font-open-sans-custom text-xs"
           >
-            <SparklesIcon className="me-1 size-3" /> Популярный
+            <SparklesIcon className="me-1 size-3" /> Хит продаж
           </Badge>
           <div className="ml-auto">
             <Button size="sm" className="bg-white text-black hover:bg-gray-100 font-open-sans-custom text-xs">
-              Подписаться
+              Купить
             </Button>
           </div>
         </div>
         <div className="flex flex-col p-3 lg:flex-row">
           <div className="pb-2 lg:w-[30%]">
             <span className="font-mono text-3xl font-semibold tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)]">
-              2 000 ₽
+              4 990 ₽
             </span>
-            <span className="text-gray-300 text-xs font-open-sans-custom">/мес</span>
+            <span className="text-gray-300 text-xs font-open-sans-custom"></span>
           </div>
           <ul className="text-gray-300 grid gap-2 text-xs lg:w-[70%] font-open-sans-custom">
             {[
-              "2 000 ₽ кредитов включено ежемесячно",
-              "Докупайте кредиты сверх месячного лимита",
-              "5x увеличенный лимит вложений",
-              "Импорт дизайнов из популярных инструментов",
+              "Ранг: Легендарный Орёл и выше",
+              "500+ часов в CS2, чистая история",
+              "Без VAC-банов и блокировок",
+              "Мгновенная передача + гарантия 30 дней",
             ].map((f, i) => (
               <li key={i} className="flex items-center gap-2">
                 <Check className="w-[1.05rem] h-[1.05rem] text-white flex-shrink-0" strokeWidth={3} />
@@ -130,49 +130,53 @@ export function BentoPricing() {
 
       <PricingCard
         titleBadge="СТАРТ"
-        priceLabel="0 ₽"
+        priceLabel="990 ₽"
+        priceSuffix=""
         features={[
-          "500 ₽ кредитов включено ежемесячно",
-          "Деплой приложений в облако",
-          "Визуальное редактирование",
-          "Синхронизация с Git",
+          "Ранг: Серебро — Золотая Звезда",
+          "100+ часов, без банов",
+          "Базовый инвентарь",
+          "Мгновенная передача",
         ]}
         className="lg:col-span-3"
-        cta="Начать"
+        cta="Купить"
       />
 
       <PricingCard
-        titleBadge="КОМАНДА"
-        priceLabel="3 000 ₽"
-        priceSuffix="/чел/мес"
+        titleBadge="ПРО"
+        priceLabel="2 490 ₽"
+        priceSuffix=""
         features={[
-          "3 000 ₽ кредитов на участника ежемесячно",
-          "Единый биллинг и управление командой",
-          "Общие чаты и совместная работа",
+          "Ранг: АК — Двойной АК",
+          "300+ часов, чистая история",
+          "Скины в инвентаре",
+          "Гарантия 14 дней",
         ]}
         className="lg:col-span-4"
+        cta="Купить"
       />
 
       <PricingCard
-        titleBadge="БИЗНЕС"
-        priceLabel="10 000 ₽"
-        priceSuffix="/чел/мес"
-        features={["3 000 ₽ кредитов на участника ежемесячно", "Отключение обучения по умолчанию", "Полный доступ к API"]}
+        titleBadge="ЭЛИТА"
+        priceLabel="3 990 ₽"
+        priceSuffix=""
+        features={["Ранг: Мастер-Хранитель и выше", "Редкие скины и ножи", "Гарантия 30 дней"]}
         className="lg:col-span-4"
+        cta="Купить"
       />
 
       <PricingCard
-        titleBadge="КОРПОРАЦИЯ"
+        titleBadge="ИНДИВИДУАЛЬНО"
         priceLabel="По запросу"
         priceSuffix=""
         features={[
-          "Отключение обучения по умолчанию",
-          "SAML SSO",
-          "Приоритетный доступ",
-          "Персональная поддержка",
+          "Подбор аккаунта под ваши требования",
+          "Любой ранг и инвентарь",
+          "Приоритетная поддержка 24/7",
+          "Расширенная гарантия",
         ]}
         className="lg:col-span-8"
-        cta="Связаться"
+        cta="Написать"
       />
     </div>
   )
