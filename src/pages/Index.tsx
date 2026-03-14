@@ -5,19 +5,21 @@ import { Feature } from "@/components/ui/feature-with-advantages"
 import { BentoPricing } from "@/components/ui/bento-pricing"
 import { ContactCard } from "@/components/ui/contact-card"
 import { AboutQuote } from "@/components/ui/about-quote"
+import { AccountsModal } from "@/components/AccountsModal"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function Index() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const pricingSectionRef = useRef<HTMLDivElement>(null)
   const aboutSectionRef = useRef<HTMLDivElement>(null)
   const contactSectionRef = useRef<HTMLDivElement>(null)
+  const [accountsOpen, setAccountsOpen] = useState(false)
 
   useEffect(() => {
     const scrollContainer = scrollContainerRef.current
@@ -170,7 +172,7 @@ export default function Index() {
               </p>
 
               <div className="flex justify-center">
-                <ShinyButton className="px-8 py-3 text-base">выбрать аккаунт</ShinyButton>
+                <ShinyButton className="px-8 py-3 text-base" onClick={() => setAccountsOpen(true)}>выбрать аккаунт</ShinyButton>
               </div>
             </div>
           </div>
@@ -323,6 +325,8 @@ export default function Index() {
           </div>
         </section>
       </div>
+
+      <AccountsModal open={accountsOpen} onClose={() => setAccountsOpen(false)} />
     </main>
   )
 }
